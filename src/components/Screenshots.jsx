@@ -1,9 +1,10 @@
 import React, { useCallback, useState } from "react";
-import * as PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
 
 const Screenshots = ({ screenshots }) => {
+  if (!screenshots) return null;
 
   const [currentImage, setCurrentImage] = useState(0);
   const [viewerIsOpen, setViewerIsOpen] = useState(false);

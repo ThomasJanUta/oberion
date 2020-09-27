@@ -1,9 +1,12 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
+import exampleData from "../../log/example-data";
 
 const Index = (props) => {
-  const { data: { websiteData } } = props;
+  // const { data: { websiteData } } = props;
+  const websiteData = exampleData.data.websiteData;
+  console.log(websiteData);
 
   // Layout.jsx and its sub components contain most of the logic to build the website
   return <Layout websiteData={websiteData} />;

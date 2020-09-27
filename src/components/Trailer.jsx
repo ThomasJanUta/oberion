@@ -1,5 +1,5 @@
 import React from "react";
-import * as PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import ReactPlayer from "react-player";
 
 const playerTagStyle = {
@@ -14,8 +14,10 @@ const videoTagStyle = {
   },
 };
 
-const Trailer = ({ trailer }) => {
-  if (trailer === null) return null;
+const Trailer = ({ movies }) => {
+  if (movies.length === 0) return null;
+  const trailer = movies[0];
+
   return (
     <ReactPlayer
       style={playerTagStyle}
@@ -37,10 +39,7 @@ const Trailer = ({ trailer }) => {
       }} />
   );
 };
-Trailer.defaultProps = {
-  trailer: null,
-};
 Trailer.propTypes = {
-  trailer: PropTypes.object,
+  movies: PropTypes.object,
 };
 export default Trailer;

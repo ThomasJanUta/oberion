@@ -1,8 +1,10 @@
 import React from "react";
-import * as PropTypes from "prop-types";
+import PropTypes from "prop-types";
 
 
-const Hero = ({ heroImg, children }) => {
+const Hero = ({ screenshots, children }) => {
+  if (screenshots.length === 0) return <div>{children}</div>;
+  const heroImg = screenshots[0].path_full;
 
   const backgroundStyles = {
     backgroundSize: "cover",
@@ -12,16 +14,14 @@ const Hero = ({ heroImg, children }) => {
   };
 
   return (
-    <div className="hero__container"
-         style={backgroundStyles}
-    >
+    <div className="hero__container" style={backgroundStyles}>
       {children}
     </div>
   );
 };
 
 Hero.propTypes = {
-  heroImg: PropTypes.string,
+  screenshots: PropTypes.array,
   children: PropTypes.node.isRequired,
 };
 export default Hero;

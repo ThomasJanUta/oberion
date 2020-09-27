@@ -1,5 +1,5 @@
 import React from "react";
-import * as PropTypes from "prop-types";
+import PropTypes from "prop-types";
 import Hero from "./Hero";
 import Trailer from "./Trailer";
 import StoreLink from "./StoreLink";
@@ -25,15 +25,10 @@ import Error from "./error/Error";
  * If these attributes do not exist on your Steam page, an error page will display.
  */
 const Layout = ({ websiteData }) => {
-
-  if (!websiteData) {
-    return <Error />;
-  }
-  console.log(websiteData);
   const { appid, gameName, screenshots, movies, description, supportInfo, legalNotice }
     = websiteData;
 
-  if (!websiteData || !appid || !gameName || !description || !legalNotice) {
+  if (!websiteData || !appid || !gameName || !description) {
     return <Error />;
   }
 
@@ -42,25 +37,17 @@ const Layout = ({ websiteData }) => {
       <header className="header"></header>
       <main className="main">
 
-        {screenshots && (
-          <Hero heroImg={screenshots[0].path_full}>
-            <h1 className="hero__heading">{gameName}</h1>
-            {movies && <Trailer trailer={movies[0]} />}
-          </Hero>
-        )}
+        <Hero screenshots={screenshots}>
+          <h1 className="hero__heading">{gameName}</h1>
+          <Trailer movies={movies} />
+        </Hero>
 
         <article className="content">
-          <StoreLink appid={appid}
-                     gameName={gameName} />
-          <Divider />
+          <StoreLink appid={appid} gameName={gameName} />
+          <Divider nextElement={description} />
           <Description description={description} />
-
-          {screenshots && (
-            <>
-              <Divider />
-              <Screenshots screenshots={screenshots} />
-            </>
-          )}
+          <Divider nextElement={screenshots} />
+          <Screenshots screenshots={screenshots} />
         </article>
 
         <Divider />

@@ -25,16 +25,16 @@ module.exports = {
     `gatsby-plugin-sharp`,
 
     /* --- source --- */
-    {
-      resolve: "gatsby-source-apiserver",
-      options: {
-        url: process.env.API_ENDPOINT,
-        method: "post",
-        headers: { "Content-Type": "application/json" },
-        data: { url: process.env.STEAM_URL },
-        name: `websiteData`,
-        entityLevel: `websiteData`,
-      },
-    },
+    // {
+    //   resolve: "gatsby-source-apiserver",
+    //   options: {
+    //     url: process.env.API_ENDPOINT,
+    //     method: "post",
+    //     headers: { "Content-Type": "application/json" },
+    //     data: { url: process.env.STEAM_URL },
+    //     name: `websiteData`,
+    //     entityLevel: `websiteData`,
+    //   },
+    // },
   ],
 };

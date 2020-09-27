@@ -1,5 +1,5 @@
 import React from "react";
-import * as PropTypes from "prop-types";
+import PropTypes from "prop-types";
 
 const StoreLink = ({ appid, gameName }) => {
   if (appid === undefined) return null;
@@ -19,7 +19,7 @@ const StoreLink = ({ appid, gameName }) => {
   );
 };
 StoreLink.propTypes = {
-  appid: PropTypes.string,
+  appid: PropTypes.number,
   gameName: PropTypes.string,
 };
 export default StoreLink;
