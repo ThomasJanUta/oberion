@@ -1,12 +1,12 @@
 body {
-    background-color: #000000;
-    color: #ffffff;
+    background-color: #0a0d10;
+    color: #f0f1f1;
     margin: 0;
     width: 100%;
     font-family: "Roboto", Arial, sans-serif;
 }
 body p {
-    color: #c46037;
+    color: #E6E7E8;
 }
 body h1 {
     font-size: 3rem;
@@ -104,7 +104,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 
 .description {
     font-family: Roboto, Arial, sans-serif;
-    color: #c46037;
+    color: #E6E7E8;
     font-size: 1rem;
     margin: 0 0.5rem;
 }
@@ -140,7 +140,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
 
 .footer {
     text-align: center;
-    margin: 0 auto 0 auto;
+    margin: 0 auto 3rem auto;
     max-width: 44rem;
 }
 .footer p {
