@@ -11,6 +11,14 @@ import Error from "./error/Error";
 import Title from "./Title";
 
 
+/**
+ * This is the main component for your website.
+ *
+ * It is not recommended to change the JSX code of this file or subcomponents.
+ * This might lead to errors in future updates.
+ *
+ * If required attributes do not exist, an error page will display.
+ */
 const Home = ({ websiteData }) => {
   const { appid, gameName, description, screenshots, movies, supportInfo, legalNotice }
     = websiteData;

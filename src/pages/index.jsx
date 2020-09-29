@@ -3,6 +3,10 @@ import { graphql } from "gatsby";
 import exampleData from "../../log/example-data";
 import Home from "../components/Home";
 
+
+/**
+ * ./src/components/Home.jsx contains most of the logic to build your website.
+ */
 const Index = (props) => {
   // const { data: { websiteData } } = props;
   const websiteData = exampleData.data.websiteData;

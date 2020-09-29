@@ -15,8 +15,6 @@ body h1 {
 body h1, body h2, body h3, body h4, body h5, body h6 {
     font-family: 'Press Start 2P', cursive;
 }
-
-
 .main {
     display: flex;
     flex-flow: column nowrap;
@@ -26,7 +24,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     height: 100%;
 }
 
-
+/* --- error --- */
 .error__container {
     display: flex;
     flex-flow: column nowrap;
@@ -41,38 +39,49 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     margin: 2rem 0;
 }
 
+/* --- store-link --- */
+.store-link__section {
+    margin: 0 auto;
+    padding: 3rem 0;
+    max-width: 70rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .store-link__container {
-    z-index: 2;
     margin: 0 auto;
     position: relative;
     overflow: hidden;
     max-width: 646px;
     width: 100%;
-    height: 100%;
-    padding-top: 30%;
+    padding-top: 192px;
 }
 .store-link__iframe {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
+    bottom: 0;
     width: 100%;
     height: 100%;
 }
-@media only screen and (max-width: 725px) {
-    /* Keep aspect ratio of iframe */
-    .store-link__container {
-        padding-top: 56.25%; /* 16:9 */
-        margin: 0 auto -150px auto;
-    }
+.wishlist-button {
+    display: none;
 }
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 550px) {
     /* Steam's iframe is not designed for small screens and has limited responsiveness */
     .store-link__container {
         display: none;
     }
+
+    .wishlist-button {
+        display: block;
+    }
 }
 
-
+/* --- description --- */
 .content {
     display: flex;
     flex-flow: column nowrap;
@@ -101,6 +110,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     padding-bottom: 0.25em;
 }
 
+/* --- screenshot --- */
 .screenshot__container {
     max-width: 44rem;
     text-align: left;
@@ -113,7 +123,7 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     }
 }
 
-
+/* --- footer --- */
 .footer {
     margin: auto auto 0 auto;
     text-align: center;

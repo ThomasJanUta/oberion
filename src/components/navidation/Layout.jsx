@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Header from "./Header";
 import Footer from "./Footer";
 import styled from "styled-components";
 
@@ -12,19 +11,10 @@ const PageContainer = styled.div`
   flex-direction: column;
 `;
 
-/**
- * This layout builds your website.
- * Feel free to change the corresponding className attributes / CSS classes in styles.css.
- *
- * It is not recommended to change the JSX code of this file or subcomponents.
- * This might lead to errors in future updates.
- *
- * If required attributes do not exist on your Steam page, an error page will display.
- */
 const Layout = ({ children, legalNotice, supportInfo }) => {
   return (
     <PageContainer>
-      <Header />
+      {/*<Header />*/}
       {children}
       <Footer legalNotice={legalNotice} supportInfo={supportInfo} />
     </PageContainer>
