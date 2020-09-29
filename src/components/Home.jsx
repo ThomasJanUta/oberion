@@ -25,9 +25,9 @@ const Home = ({ websiteData }) => {
 
       <article className="content">
         <StoreLink appid={appid} gameName={gameName} />
-        <Divider nextElement={description} />
+        <Divider displayWith={description} />
         <Description description={description} />
-        <Divider nextElement={screenshots} />
+        <Divider displayWith={screenshots} />
         <Screenshots screenshots={screenshots} />
       </article>
 

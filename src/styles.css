@@ -137,27 +137,15 @@ body h1, body h2, body h3, body h4, body h5, body h6 {
     }
 }
 
-.divider {
-    height: 0.7rem;
-    max-width: 95vw;
-    margin: 4rem 0;
-}
-.footer__divider {
-    height: 0.7rem;
-    max-width: 95vw;
-}
 
 .footer {
     text-align: center;
-    margin: -2rem auto 4rem auto;
+    margin: 0 auto 0 auto;
     max-width: 44rem;
 }
 .footer p {
     margin-block-start: 0.5em;
     margin-block-end: 0.5em;
-}
-.footer__support-info {
-    margin-bottom: 3rem;
 }
 .footer__legal {
     font-size: 0.85rem;

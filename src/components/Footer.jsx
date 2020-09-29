@@ -4,15 +4,19 @@ import Divider from "./Divider";
 
 
 const Footer = ({ legalNotice, supportInfo }) => {
+
+
   return (
     <footer className="footer">
+
+      <Divider displayWith={true} verticalMargin={2} />
+
       {supportInfo && (
-        <div className="footer__support-info">
+        <div>
           <h2>Say Hello!</h2>
           <p>{supportInfo.email}</p>
         </div>
       )}
-      <Divider />
       <Attribution />
       {legalNotice && <span>{legalNotice}</span>}
     </footer>
