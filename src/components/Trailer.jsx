@@ -21,7 +21,10 @@ const Trailer = ({ movies }) => {
   return (
     <ReactPlayer
       style={playerTagStyle}
-      url={trailer.mp4.res480}
+      url={[
+        { src: trailer.webm.res480, type: "video/webm" },
+        { src: trailer.mp4.res480, type: "video/mp4" },
+      ]}
       playing
       loop controls volume={0.8} muted
       onContextMenu={e => e.preventDefault()}
@@ -40,6 +43,6 @@ const Trailer = ({ movies }) => {
   );
 };
 Trailer.propTypes = {
-  movies: PropTypes.object,
+  movies: PropTypes.array,
 };
 export default Trailer;

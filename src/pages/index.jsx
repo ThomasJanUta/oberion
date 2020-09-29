@@ -1,7 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
-import Layout from "../components/Layout";
 import exampleData from "../../log/example-data";
+import Home from "../components/Home";
 
 const Index = (props) => {
   // const { data: { websiteData } } = props;
@@ -9,7 +9,7 @@ const Index = (props) => {
   console.log(websiteData);
 
   // Layout.jsx and its sub components contain most of the logic to build the website
-  return <Layout websiteData={websiteData} />;
+  return <Home websiteData={websiteData} />;
 };
 export const query = graphql`
 {

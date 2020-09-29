@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import svg from "../svg/divider.min.svg";
+import Divider from "./Divider";
 
 
 const Footer = ({ legalNotice, supportInfo }) => {
@@ -12,7 +12,7 @@ const Footer = ({ legalNotice, supportInfo }) => {
           <p>{supportInfo.email}</p>
         </div>
       )}
-      <img src={svg} className="footer__divider" alt="Divider Element" />
+      <Divider />
       <Attribution />
       {legalNotice && <span>{legalNotice}</span>}
     </footer>
