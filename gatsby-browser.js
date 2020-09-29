@@ -1,6 +1,6 @@
 /** @see https://www.gatsbyjs.org/docs/browser-apis/ */
 import React from "react";
-import RootLayout from "./src/components/RootLayout";
+import RootLayout from "./src/components/navidation/RootLayout";
 
 /**
  * Apply global settings to the Gatsby root element such as styles and meta tags for <head>.

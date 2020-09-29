@@ -6,7 +6,7 @@ import StoreLink from "./StoreLink";
 import Divider from "./Divider";
 import Description from "./Description";
 import Screenshots from "./Screenshots";
-import Layout from "./Layout";
+import Layout from "./navidation/Layout";
 import Error from "./error/Error";
 import Title from "./Title";
 

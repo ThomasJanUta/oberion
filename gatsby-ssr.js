@@ -1,6 +1,6 @@
 /** @see https://www.gatsbyjs.org/docs/ssr-apis/ */
 import React from "react";
-import RootLayout from "./src/components/RootLayout";
+import RootLayout from "./src/components/navidation/RootLayout";
 
 /**
  * Apply page wide settings to the Gatsby root element such as styles and tags for <head>.

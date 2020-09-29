@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import Header from "./Header";
 import Footer from "./Footer";
 import styled from "styled-components";
 
@@ -23,7 +24,7 @@ const PageContainer = styled.div`
 const Layout = ({ children, legalNotice, supportInfo }) => {
   return (
     <PageContainer>
-      <header className="header" />
+      <Header />
       {children}
       <Footer legalNotice={legalNotice} supportInfo={supportInfo} />
     </PageContainer>
