@@ -12,7 +12,7 @@ const StoreLink = ({ appid, gameName }) => {
   const widgetLabel = `Buy ${gameName} on Steam`;
 
   const buttonUrl = `https://store.steampowered.com/app/${appid}`;
-  const buttonLabel = `Wishlist on Steam`;
+  const buttonLabel = `Buy on Steam`;
 
   return (
     <section className="store-link__section">
@@ -43,7 +43,7 @@ export default StoreLink;
 
 const WishlistButton = styled.div`
   color: #fff;
-  width: 397px;
+  width: 21rem;
   text-align: left;
   background: linear-gradient(225deg,#1274a7 47%,#081a42 0);
   margin: auto;

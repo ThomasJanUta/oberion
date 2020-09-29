@@ -5,7 +5,7 @@ import Trailer from "./Trailer";
 import StoreLink from "./StoreLink";
 import Divider from "./Divider";
 import Description from "./Description";
-import Screenshots from "./Screenshots";
+import Screenshot from "./Screenshot";
 import Layout from "./navidation/Layout";
 import Error from "./error/Error";
 import Title from "./Title";
@@ -38,7 +38,7 @@ const Home = ({ websiteData }) => {
           <Divider displayWith={description} />
           <Description description={description} />
           <Divider displayWith={screenshots} />
-          <Screenshots screenshots={screenshots} />
+          <Screenshot screenshots={screenshots} />
         </article>
 
       </main>

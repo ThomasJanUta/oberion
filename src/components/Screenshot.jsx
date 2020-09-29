@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
 
-const Screenshots = ({ screenshots }) => {
+const Screenshot = ({ screenshots }) => {
   if (!screenshots) return null;
 
   const [currentImage, setCurrentImage] = useState(0);
@@ -52,7 +52,7 @@ const Screenshots = ({ screenshots }) => {
     </section>
   );
 };
-Screenshots.propTypes = {
+Screenshot.propTypes = {
   screenshots: PropTypes.array,
 };
-export default Screenshots;
+export default Screenshot;
