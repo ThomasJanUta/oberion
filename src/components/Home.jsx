@@ -8,6 +8,7 @@ import Description from "./Description";
 import Screenshots from "./Screenshots";
 import Layout from "./Layout";
 import Error from "./error/Error";
+import Title from "./Title";
 
 
 const Home = ({ websiteData }) => {
@@ -20,7 +21,7 @@ const Home = ({ websiteData }) => {
       <main className="main">
 
         <Hero screenshots={screenshots}>
-          <h1 className="hero__heading">{gameName}</h1>
+          <Title gameName={gameName} />
           <Trailer movies={movies} />
         </Hero>
 
