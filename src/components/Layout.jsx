@@ -1,6 +1,15 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Footer from "./Footer";
+import styled from "styled-components";
+
+const PageContainer = styled.div`
+  height: 100%;
+  min-height: calc(100vh);
+  
+  display: flex; 
+  flex-direction: column;
+`;
 
 /**
  * This layout builds your website.
@@ -13,13 +22,11 @@ import Footer from "./Footer";
  */
 const Layout = ({ children, legalNotice, supportInfo }) => {
   return (
-    <>
+    <PageContainer>
       <header className="header" />
-      <main className="main">
-        {children}
-      </main>
+      {children}
       <Footer legalNotice={legalNotice} supportInfo={supportInfo} />
-    </>
+    </PageContainer>
   );
 };
 Layout.propTypes = {

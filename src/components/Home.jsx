@@ -17,20 +17,22 @@ const Home = ({ websiteData }) => {
 
   return (
     <Layout supportInfo={supportInfo} legalNotice={legalNotice}>
+      <main className="main">
 
-      <Hero screenshots={screenshots}>
-        <h1 className="hero__heading">{gameName}</h1>
-        <Trailer movies={movies} />
-      </Hero>
+        <Hero screenshots={screenshots}>
+          <h1 className="hero__heading">{gameName}</h1>
+          <Trailer movies={movies} />
+        </Hero>
 
-      <article className="content">
-        <StoreLink appid={appid} gameName={gameName} />
-        <Divider displayWith={description} />
-        <Description description={description} />
-        <Divider displayWith={screenshots} />
-        <Screenshots screenshots={screenshots} />
-      </article>
+        <article className="content">
+          <StoreLink appid={appid} gameName={gameName} />
+          <Divider displayWith={description} />
+          <Description description={description} />
+          <Divider displayWith={screenshots} />
+          <Screenshots screenshots={screenshots} />
+        </article>
 
+      </main>
     </Layout>
   );
 };
