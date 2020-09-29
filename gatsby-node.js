@@ -1,3 +1,10 @@
+/** Fix React hot loader warning */
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
+  if (stage.startsWith("develop")) {
+    actions.setWebpackConfig({ resolve: { alias: { "react-dom": "@hot-loader/react-dom" } } });
+  }
+};
+
 /**
  * Create a GraphQL type definition to provide the right objects for each JSX component.
  *
