@@ -80,6 +80,8 @@ Feel free to open an issue if you have questions, encounter bugs or want to cont
 
 Pull requests should always reference an issue. Before making a pull request, please open an issue first.
 
+Read the [contribution guidelines](CONTRIBUTING.md)
+
 
 ## 📝 License
 Oberion 💙 open source. MIT license: Free for private and commercial use. Do whatever you want!
