@@ -3,15 +3,16 @@
     <img alt="Oberion" src="https://oberion.io/logo.OberionIO.png" width="60" />
   </a>
 </p>
-<h1 align="center">
-  Oberion - The Website Builder made for Game Developers
-</h1>
-
-[Demo](https://oberion.io/)
+<h1 align="center">Oberion</h1>
+<h3 align="center">🎮🕹️🤖</h3>
+<h3 align="center">The Website Builder made for Game Developers</h3>
+<h3 align="center">
+     <a href="https://oberion.io/preview" rel="noopener">Demo & Preview</a>
+</h3>
 
 [Oberion](https://oberion.io) creates a stylish website for your video game. Kick off your gaming website with this default starter.
 
-Oberion requires you to have a Steam Store page with content about your game. Take a look at <https://oberion.io> to see how your website will look like with your current Steam Store page.
+Oberion requires you to have a Steam Store page with content about your game. Take a look at <https://oberion.io/preview> to see how your website will look like with your current Steam Store page.
 
 
 ## 🚀 Quick start
@@ -27,7 +28,7 @@ Oberion requires you to have a Steam Store page with content about your game. Ta
 ## 🧐 What's inside?
 Everything you need to build your own website!
 
-This is a [Gatsby](https://www.gatsbyjs.org/) project written in [JavaScript](https://developer.mozilla.org/en-US/docs/Glossary/JavaScript) and [React](https://reactjs.org/). [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) is used for styling. [GraphQL](https://graphql.org/) is used for querying the content. [Node.js](https://nodejs.org/en/) builds the static site once before deployment.
+This is a [Gatsby](https://www.gatsbyjs.org/) project written in [JavaScript](https://developer.mozilla.org/en-US/docs/Glossary/JavaScript) and [React](https://reactjs.org/). Conventional [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS) and [styled-components](https://styled-components.com/) is used for styling. [GraphQL](https://graphql.org/) is used for querying the content. [Node.js](https://nodejs.org/en/) builds the static site once before deployment.
 
 
 ## 🎓 Customize
@@ -55,7 +56,7 @@ Redeploying will not overwrite your custom styles.
 
 ### Customize HTML
 
-This project uses [React JSX](https://reactjs.org/docs/introducing-jsx.html) and JavaScript to define the browsers HTML in the [src/pages](src/pages) and [src/components](src/components) folder. If you have no experience with React it is not recommended change the JSX code.
+This project uses [React JSX](https://reactjs.org/docs/introducing-jsx.html) and JavaScript to define the browsers HTML in the [src/pages](src/pages) and [src/components](src/components) folder. If you have no experience with React it is not recommended to change the JSX code.
 
 If you want to continue receiving content updates from your Steam page the JSX code must remain intact.
 
@@ -84,7 +85,9 @@ Read the [contribution guidelines](CONTRIBUTING.md)
 
 
 ## 📝 License
-Oberion 💙 open source. MIT license: Free for private and commercial use. Do whatever you want!
+Oberion 💙 open source. 
+
+MIT license: Free for private and commercial use. Do whatever you want!
 
 
 ## 💫 Check out our project
