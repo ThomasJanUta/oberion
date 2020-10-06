@@ -35,7 +35,7 @@ const StoreLink = ({ appid, gameName }) => {
   );
 };
 StoreLink.propTypes = {
-  appid: PropTypes.number,
+  appid: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   gameName: PropTypes.string,
 };
 export default StoreLink;

@@ -25,16 +25,22 @@ module.exports = {
     `gatsby-plugin-sharp`,
 
     /* --- source --- */
-    // {
-    //   resolve: "gatsby-source-apiserver",
-    //   options: {
-    //     url: process.env.API_ENDPOINT,
-    //     method: "post",
-    //     headers: { "Content-Type": "application/json" },
-    //     data: { url: process.env.STEAM_URL },
-    //     name: `websiteData`,
-    //     entityLevel: `websiteData`,
-    //   },
-    // },
+    {
+      resolve: "gatsby-source-apiserver",
+      options: {
+        url: process.env.OBERION_API_ENDPOINT, // copy from https://oberion.io/user/settings/
+        method: "post", // use HTTP method post
+        headers: { "Content-Type": "application/json" }, // get response as JSON
+        data: {
+          sid: process.env.OBERION_SITE_ID, // copy from https://oberion.io/user/settings/
+          key: process.env.OBERION_API_KEY, // copy from https://oberion.io/user/settings/
+        },
+        name: `siteData`, // name of the source file i.e. response object
+        entityLevel: `data.siteData`, // navigate to the the important part in the response object
+        localSave: true, // save a copy  of your data as a local file
+        path: `${__dirname}/`, // save in project root directory
+        verboseOutput: false, // true for detailed debugging output
+      },
+    },
   ],
 };

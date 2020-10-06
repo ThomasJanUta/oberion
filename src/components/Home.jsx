@@ -19,10 +19,10 @@ import Title from "./Title";
  *
  * If required attributes do not exist, an error page will display.
  */
-const Home = ({ websiteData }) => {
+const Home = ({ siteData }) => {
   const { appid, gameName, description, screenshots, movies, supportInfo, legalNotice }
-    = websiteData;
-  if (!websiteData || !appid || !gameName || !description) return <Error />;
+    = siteData;
+  if (!siteData || !appid || !gameName || !description) return <Error />;
 
   return (
     <Layout supportInfo={supportInfo} legalNotice={legalNotice}>
@@ -46,8 +46,8 @@ const Home = ({ websiteData }) => {
   );
 };
 Home.propTypes = {
-  websiteData: PropTypes.shape({
-    appid: PropTypes.number,
+  siteData: PropTypes.shape({
+    appid: PropTypes.PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     gameName: PropTypes.string,
     description: PropTypes.string,
     movies: PropTypes.array,

@@ -13,7 +13,7 @@ exports.onCreateWebpackConfig = ({ stage, actions }) => {
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
   const typeDefs = `
-    type websiteData implements Node @dontInfer {
+    type siteData implements Node @dontInfer {
       appid: ID
       gameName: String
       description: String

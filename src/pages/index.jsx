@@ -1,23 +1,28 @@
 import React from "react";
 import { graphql } from "gatsby";
-import exampleData from "../../log/example-data";
 import Home from "../components/Home";
+// import localFile from "../../siteData.json"; // enable when using a local JSON file
 
 
-/**
- * ./src/components/Home.jsx contains most of the logic to build your website.
- */
 const Index = (props) => {
-  // const { data: { websiteData } } = props;
-  const websiteData = exampleData.data.websiteData;
-  console.log(websiteData);
+  // Default: Use GraphQL to load your data
+  const { data: { siteData } } = props;
 
-  // Layout.jsx and its sub components contain most of the logic to build the website
-  return <Home websiteData={websiteData} />;
+  // Optional: Use a local JSON file to load your data
+  // const { data: { siteData } } = localFile;
+
+  // There are two ways to inspect your data:
+  // 1. Use `console.log(siteData);` to view the log in your browser's developer tools
+  // 2. If you use GraphQL, use Gatsby's GraphQL interface at `http://localhost:8000/___graphql`
+
+  // console.log(siteData);
+
+  // ./src/components/Home.jsx contains most of the logic to build your website.
+  return <Home siteData={siteData} />;
 };
 export const query = graphql`
 {
-  websiteData {
+  siteData {
     appid
     gameName
     description

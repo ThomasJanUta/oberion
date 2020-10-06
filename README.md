@@ -4,19 +4,19 @@
   </a>
 </p>
 <h1 align="center">Oberion</h1>
-<h3 align="center">🎮🕹️🤖</h3>
+<h3 align="center">🎮🤖🕹️</h3>
 <h3 align="center">The Website Builder made for Game Developers</h3>
 <h3 align="center">
      <a href="https://oberion.io/preview" rel="noopener">Demo & Preview</a>
 </h3>
 
-[Oberion](https://oberion.io) creates a stylish website for your video game. Kick off your gaming website with this default starter.
+[Oberion](https://oberion.io) creates a stylish website for your video game.
 
 Oberion requires you to have a Steam Store page with content about your game. Take a look at <https://oberion.io/preview> to see how your website will look like with your current Steam Store page.
 
 
 ## 🚀 Quick start
-1. Make your Steam Store page beautiful and engaging for gamers.
+1. Make your Steam Store page beautiful and interesting for gamers.
 - all the website content comes from your Steam page
 - GIFs in your description make your website feel more alive
 - include cool screenshots
@@ -85,9 +85,9 @@ Read the [contribution guidelines](CONTRIBUTING.md)
 
 
 ## 📝 License
-Oberion 💙 open source. 
+Oberion 💙 open source. Build something great!
 
-MIT license: Free for private and commercial use. Do whatever you want!
+MIT license: Free for private and commercial use. 
 
 
 ## 💫 Check out our project
