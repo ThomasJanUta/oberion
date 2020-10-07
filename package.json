@@ -8,6 +8,7 @@
   "private": false,
   "scripts": {
     "develop": "gatsby develop",
+    "develop:8002": "gatsby develop -p 8002",
     "clean": "gatsby clean",
     "build": "gatsby build",
     "serve": "gatsby serve",

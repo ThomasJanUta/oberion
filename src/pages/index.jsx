@@ -49,7 +49,25 @@ export const query = graphql`
       email
       url
     }
-    legalNotice
+    legalNoticeSteam
+    legal {
+      studioName
+      contact
+      legalNotice
+    }
+    socialMedia {
+      discord
+      facebook
+      instagram
+      reddit
+      twitter
+      youtube
+      twitch
+    }
+    images {
+      hero
+      logoGame
+    }
   }
 }
 `;

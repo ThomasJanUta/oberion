@@ -47,7 +47,7 @@ const Home = ({ siteData }) => {
 };
 Home.propTypes = {
   siteData: PropTypes.shape({
-    appid: PropTypes.PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    appid: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     gameName: PropTypes.string,
     description: PropTypes.string,
     movies: PropTypes.array,

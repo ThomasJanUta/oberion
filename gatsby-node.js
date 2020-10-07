@@ -19,8 +19,11 @@ exports.createSchemaCustomization = ({ actions }) => {
       description: String
       movies: [Movies]
       screenshots: [Screenshots]
-      legalNotice: String
+      legalNoticeSteam: String
       supportInfo: SupportInfo
+      legal: Legal
+      socialMedia: SocialMedia
+      images: Images
     }
     type Screenshots {
       screenshotID: ID
@@ -46,6 +49,24 @@ exports.createSchemaCustomization = ({ actions }) => {
     type Mp4 {
       res480: String
       resMax: String
+    }
+    type Legal {
+      studioName: String
+      contact: String
+      legalNotice: String
+    }
+    type SocialMedia {
+      discord: String
+      facebook: String
+      instagram: String
+      reddit: String
+      twitter: String
+      youtube: String
+      twitch: String
+    }
+    type Images {
+      hero: String
+      logoGame: String
     }
   `;
   createTypes(typeDefs);
