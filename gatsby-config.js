@@ -25,22 +25,22 @@ module.exports = {
     `gatsby-plugin-sharp`,
 
     /* --- source --- */
-    {
-      resolve: "gatsby-source-apiserver",
-      options: {
-        url: process.env.OBERION_API_ENDPOINT, // see `.env.sample` for instructions
-        method: "post", // use HTTP method post
-        headers: { "Content-Type": "application/json" }, // get response as JSON
-        data: {
-          sid: process.env.OBERION_SITE_ID, // see `.env.sample` for instructions
-          key: process.env.OBERION_API_KEY, // see `.env.sample` for instructions
-        },
-        name: `siteData`, // name of the source file i.e. response object
-        entityLevel: `data.siteData`, // navigate to the the important part in the response object
-        localSave: true, // save a copy  of your data as a local file
-        path: `${__dirname}/res/`, // save in local directory
-        verboseOutput: false, // true for detailed debugging output
-      },
-    },
+    // {
+    //   resolve: "gatsby-source-apiserver",
+    //   options: {
+    //     url: process.env.OBERION_API_ENDPOINT, // see `.env.sample` for instructions
+    //     method: "post", // use HTTP method post
+    //     headers: { "Content-Type": "application/json" }, // get response as JSON
+    //     data: {
+    //       sid: process.env.OBERION_SITE_ID, // see `.env.sample` for instructions
+    //       key: process.env.OBERION_API_KEY, // see `.env.sample` for instructions
+    //     },
+    //     name: `siteData`, // name of the source file i.e. response object
+    //     entityLevel: `data.siteData`, // navigate to the the important part in the response object
+    //     localSave: true, // save a copy  of your data as a local file
+    //     path: `${__dirname}/res/`, // save in local directory
+    //     verboseOutput: false, // true for detailed debugging output
+    //   },
+    // },
   ],
 };

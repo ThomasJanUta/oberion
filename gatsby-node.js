@@ -1,13 +1,45 @@
-/** Fix React hot loader warning */
-exports.onCreateWebpackConfig = ({ stage, actions }) => {
-  if (stage.startsWith("develop")) {
-    actions.setWebpackConfig({ resolve: { alias: { "react-dom": "@hot-loader/react-dom" } } });
+const fs = require("fs");
+const _get = require("lodash/get");
+const got = require("got");
+
+
+exports.onPreExtractQueries = async () => {
+  let response;
+  const requestOptions = {
+    json: {
+      sid: process.env.OBERION_SITE_ID,
+      key: process.env.OBERION_API_KEY,
+    },
+  };
+  try {
+    response = await got.post(process.env.OBERION_API_ENDPOINT, requestOptions).json();
+  } catch (error) {
+    let body = {};
+    if (error instanceof got.HTTPError) body = await error.response.json();
+    console.error(
+      "",
+      error,
+      { ...requestOptions.json, ...body },
+    );
+    process.exit(1);
+  }
+  const siteData = _get(response, "data.siteData", null);
+  console.log("siteData", siteData);
+  if (siteData === null) {
+    console.error(`error retrieving siteData`, response);
+    process.exit(1);
+  }
+  try {
+    await fs.writeFileSync("./res/site-data.json", JSON.stringify(siteData));
+  } catch (err) {
+    console.error(`Error while saving your site data. Make sure the target directory exists.`, err);
+    process.exit(1);
   }
 };
 
+
 /**
- * Create a GraphQL type definition to provide the right objects for each JSX component.
- *
+ * Create explicit GraphQL type definitions to provide the right types.
  * @see https://www.gatsbyjs.org/docs/schema-customization/#creating-type-definitions
  */
 exports.createSchemaCustomization = ({ actions }) => {
@@ -70,4 +102,12 @@ exports.createSchemaCustomization = ({ actions }) => {
     }
   `;
   createTypes(typeDefs);
+};
+
+
+/** Fix React hot loader warning */
+exports.onCreateWebpackConfig = ({ stage, actions }) => {
+  if (stage.startsWith("develop")) {
+    actions.setWebpackConfig({ resolve: { alias: { "react-dom": "@hot-loader/react-dom" } } });
+  }
 };
