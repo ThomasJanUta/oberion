@@ -17,12 +17,12 @@
     "update": "ncu -u -x autoprefixer,postcss-loader,gatsby-plugin-postcss"
   },
   "dependencies": {
-    "autoprefixer": "9.8.0",
+    "autoprefixer": "10.4.0",
     "dotenv": "^10.0.0",
     "gatsby": "^4.0.2",
     "gatsby-image": "^3.11.0",
     "gatsby-plugin-offline": "^5.0.0",
-    "gatsby-plugin-postcss": "2.3.13",
+    "gatsby-plugin-postcss": "5.0.0",
     "gatsby-plugin-react-helmet": "^5.0.0",
     "gatsby-plugin-sharp": "^4.0.1",
     "gatsby-source-apiserver": "2.1.8",
@@ -31,7 +31,7 @@
     "got": "^11.8.2",
     "ky": "^0.28.6",
     "lodash": "^4.17.21",
-    "postcss-loader": "3.0.0",
+    "postcss-loader": "6.2.0",
     "prop-types": "^15.7.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",

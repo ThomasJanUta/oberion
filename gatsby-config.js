@@ -11,6 +11,7 @@ module.exports = {
     `gatsby-plugin-offline`,
 
     /* --- CSS --- */
+    // `gatsby-plugin-postcss`,
     {
       resolve: `gatsby-plugin-postcss`,
       options: {
