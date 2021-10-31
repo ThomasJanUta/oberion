@@ -1,5 +1,5 @@
 const fs = require("fs");
-const _get = require("lodash/get");
+const _ = require("lodash");
 const got = require("got");
 
 
@@ -14,17 +14,14 @@ exports.onPreExtractQueries = async () => {
   try {
     response = await got.post(process.env.OBERION_API_ENDPOINT, requestOptions).json();
   } catch (error) {
+    console.error("Error while fetching site data", error);
     let body = {};
-    if (error instanceof got.HTTPError) body = await error.response.json();
-    console.error(
-      "",
-      error,
-      { ...requestOptions.json, ...body },
-    );
+    // if (error instanceof got.HTTPError) body = await error.response.json();
+    // console.error("", error, { ...requestOptions.json, ...body });
     process.exit(1);
   }
-  const siteData = _get(response, "data.siteData", null);
-  console.log("siteData", siteData);
+  const siteData = _.get(response, "data.siteData", null);
+  // console.log("siteData", siteData);
   if (siteData === null) {
     console.error(`error retrieving siteData`, response);
     process.exit(1);

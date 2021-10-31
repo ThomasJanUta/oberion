@@ -1,15 +1,16 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Home from "../components/Home";
-// import localFile from "../../siteData.json"; // enable when using a local JSON file
+import localFile from "../../res/site-data.json"; // enable when using a local JSON file
 
 
 const Index = (props) => {
   // Default: Use GraphQL to load your data
-  const { data: { siteData } } = props;
+  // const { data: { siteData } } = props;
 
   // Optional: Use a local JSON file to load your data
   // const { data: { siteData } } = localFile;
+  const siteData = localFile;
 
   // There are two ways to inspect your data:
   // 1. Use `console.log(siteData);` to view the log in your browser's developer tools
