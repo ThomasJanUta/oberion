@@ -53,35 +53,54 @@ This way your custom styles are applied without breaking our default styles. CSS
 
 Redeploying will not overwrite your custom styles.
 
-
 ### Customize HTML
 
-This project uses [React JSX](https://reactjs.org/docs/introducing-jsx.html) and JavaScript to define the browsers HTML in the [src/pages](src/pages) and [src/components](src/components) folder. If you have no experience with React it is not recommended to change the JSX code.
+This project uses [React JSX](https://reactjs.org/docs/introducing-jsx.html) and JavaScript to
+define the browsers HTML in the [src/pages](src/pages) and [src/components](src/components) folder.
+If you have no experience with React it is not recommended to change the JSX code.
 
-If you want to continue receiving content updates from your Steam page the JSX code must remain intact.
+If you want to continue receiving content updates from your Steam page the JSX code must remain
+intact.
 
 ## FAQ
 
 ### Can I change the styling to customize the look and feel?
-Of course! This is open source. Make the site your own. Please be aware that <https://oberion.io> uses this project internally. We want to improve Oberion and this project. It is subject to change and your customizations might not work in future releases.
 
+Of course! This is open source. Make the site your own.
+
+Please be aware that <https://oberion.io> uses this project internally. We want to improve Oberion
+and this project. It is subject to change and your customizations might not work in future releases.
 
 ### Where is the content coming from?
+
 Directly from your Steam Store page.
 
-
 ### What is Gatsby?
-[Gatsby](https://www.gatsbyjs.org/) is a static site generator. Oberion uses Gatsby to create a static website made out of HTML, CSS, JavaScript so you can host it anywhere you want.
 
+[Gatsby](https://www.gatsbyjs.org/) is a static site generator. Oberion uses Gatsby to create a
+static website made out of HTML, CSS, JavaScript, so you can host it anywhere you want.
+
+### How do I get my site on the internet? How do I deploy the website?
+
+You can use [GitHub-Pages](https://docs.github.com/en/pages/quickstart) for a quick 5-minute
+deployment.
+
+Or you get your
+own [custom domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site)
+and host your website there.
 
 ## 🤝 How to Contribute
-Whether you're helping us fix bugs, improve the docs, or spread the word, we'd love to have you contribute! 💪💙
 
-Feel free to open an issue if you have questions, encounter bugs or want to contribute with a pull request. 
+Whether you're helping us fix bugs, improve the docs, or spread the word, we'd love to have you
+contribute! 💪💙
 
-Pull requests should always reference an issue. Before making a pull request, please open an issue first.
+Feel free to open an issue if you have questions, encounter bugs or want to contribute with a pull
+request.
 
-Read the [contribution guidelines](CONTRIBUTING.md)
+Pull requests should always reference an issue. Before making a pull request, please open an issue
+first.
+
+Read the [contribution guidelines](CONTRIBUTING.md).
 
 
 ## 📝 License
